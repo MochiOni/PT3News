@@ -1,0 +1,119 @@
+*{
+    @include box-sizing(border-box);       
+}
+/*The CSS for the Body*/
+body {
+    font-size: 15pt;
+    background-image: url('peakpx.jpg');
+    background-size: 250px 200px;
+    @include transition(padding-top .5s ease);
+}
+/*The CSS for the Navigation Bar*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav{
+   font-family: 'Titillium Web';
+   text-transform: uppercase;
+   text-align: center;
+   font-weight: 600;
+}
+.nav *{
+   box-sizing: border-box;
+   transition: all .35s ease;
+}
+.nav li{
+   display: inline-block;
+   list-style: outside none none;
+   margin: .5em .1em;
+   padding: 0;
+}
+.nav a{
+   padding: .5em .8em;
+   color: black;
+   position: relative;
+   text-decoration: none;
+   font-size: 20px;
+}
+.nav a::before,
+.nav a::after{
+   content: '';
+   height: 14px;
+   width: 14px;
+   position: absolute;
+   transition: all .35s ease;
+   opacity: 0;
+}
+.nav a::before{
+   content: '';
+   right: 0;
+   top: 0;
+   border-top: 3px solid lightgreen;
+   border-right: 3px solid lightgreen;
+   transform: translate(-100%, 50%);
+}
+.nav a::after{
+   content: '';
+   left: 0;
+   bottom: 0;
+   border-bottom: 3px solid lightgreen;
+   border-left: 3px solid lightgreen;
+   transform: translate(100%,-50%)
+}
+.nav a:hover:before,
+.nav a:hover:after{
+   transform: translate(0,0);
+   opacity: 1;
+}
+.nav a:hover{
+   color: darkgreen;
+}
+/*The CSS for the Top Header*/
+header{
+   background-image:  url('peakpx.jpg');
+   text-align: center;
+   padding: 10px 16px;
+   @include transition(all .5s ease);
+}
+h1{
+   font-size: 42px;
+   color: black;
+   line-height: 230px;
+   text-transform: uppercase;
+   font-weight: 100;
+   @include transition(all .3s ease);
+}
+.wrapper{
+   width: 800px;
+   margin: 0 auto;
+}
+section{
+   padding: 20px;
+   margin-bottom: 40px;
+   @include border-radius(4px);
+   @include box-shadow(0 1px 0)
+}
+/*The CSS for the Subheading and Paragraph*/
+h2{
+   font-size: 34px;
+   text-transform: uppercase;
+   font-weight: bold;
+   line-height: 1;
+   color: black;
+}
+p{
+   font-size: 25px;
+   margin-bottom: 2rem;
+   line-height: 2;
+   color: black;
+   text-align: center;
+   border: 3px solid black;
+   border-radius: 10px;
+}
+.me{
+   border: 5px ridge black;
+   padding: 2px;
+   border-radius: 10px;
+}

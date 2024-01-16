@@ -1,0 +1,106 @@
+body{
+     font-family: 'Droid-serif', serif;
+     font-size: 14px;
+     color: black;
+     background-image: url('peakpx.jpg');
+}
+/*The CSS for the Content*/
+header{
+     font-family: 'Playfair Display', serif;
+     font-weight: 900;
+     font-size: 80px;
+     text-transform: uppercase;
+     display: inline-block;
+     line-height: 72px;
+     margin-bottom: 20px;
+}
+p{
+     margin-top: 0;
+     margin-bottom: 20px;
+     font-size: 23px;
+     border: 5px solid black;
+     border-radius: 10px;
+}
+.news{
+     text-align: center;
+     position: relative;
+}
+.lol{
+     text-transform: uppercase;
+     border-bottom: 4px solid black;
+     border-top: 4px solid black;
+     padding: 12px 0 12px 0;
+     font-size: 30px;
+}
+.front{
+     position: relative;
+     width: 12%;
+     left: 10px;
+     border: 3px double black;
+     padding: 10px 15px 10px 15px;
+     line-height: 20px;
+     display: inline-block;
+     margin: 0 50px 20px -360px;
+}
+/*The CSS for the Navigation Bar*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav{
+   font-family: 'Titillium Web';
+   text-transform: uppercase;
+   text-align: center;
+   font-weight: 600;
+}
+.nav *{
+   box-sizing: border-box;
+   transition: all .35s ease;
+}
+.nav li{
+   display: inline-block;
+   list-style: outside none none;
+   margin: .5em .1em;
+   padding: 0;
+}
+.nav a{
+   padding: .5em .8em;
+   color: black;
+   position: relative;
+   text-decoration: none;
+   font-size: 20px;
+}
+.nav a::before,
+.nav a::after{
+   content: '';
+   height: 14px;
+   width: 14px;
+   position: absolute;
+   transition: all .35s ease;
+   opacity: 0;
+}
+.nav a::before{
+   content: '';
+   right: 0;
+   top: 0;
+   border-top: 3px solid lightgreen;
+   border-right: 3px solid lightgreen;
+   transform: translate(-100%, 50%);
+}
+.nav a::after{
+   content: '';
+   left: 0;
+   bottom: 0;
+   border-bottom: 3px solid lightgreen;
+   border-left: 3px solid lightgreen;
+   transform: translate(100%,-50%)
+}
+.nav a:hover:before,
+.nav a:hover:after{
+   transform: translate(0,0);
+   opacity: 1;
+}
+.nav a:hover{
+   color: darkgreen;
+}
